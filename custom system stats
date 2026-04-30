@@ -1,0 +1,46 @@
+#!/bin/bash
+
+clear
+
+echo "========================================"
+echo "        I USE ARCH BTW SYSTEM"
+echo "========================================"
+echo ""
+
+echo "               .--."
+echo "              |o_o |"
+echo "              |:_/ |"
+echo "             //   \\ \\"
+echo "            (|     | )"
+echo "           /'\\_   _/`\\"
+echo "           \\___)=(___/"
+echo ""
+
+echo "----------------------------------------"
+echo " SYSTEM STATS"
+echo "----------------------------------------"
+
+echo ""
+echo "CPU Load:"
+uptime
+
+echo ""
+echo "Memory:"
+free -h | awk '/Mem:/ {print "Used: " $3 " / " $2}'
+
+echo ""
+echo "Disk:"
+df -h / | awk 'NR==2 {print "Root Usage: " $3 " / " $2 " (" $5 ")"}'
+
+echo ""
+echo "Controllers:"
+ls /dev/input/js* 2>/dev/null && echo "Gamepad detected ✔" || echo "No controller detected ❌"
+
+echo ""
+echo "Audio:"
+pactl list short sinks | grep RUNNING && echo "Audio active ✔" || echo "Audio idle/suspended"
+
+echo ""
+echo "----------------------------------------"
+echo "Arch Linux ARM Retro System Online"
+echo "----------------------------------------"
