@@ -1,0 +1,6 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+UUID=785B-EB7A	/boot   vfat    defaults        0       0
+UUID=faaacd67-40e6-4394-9d46-a97be2fbb09c	/	ext4	defaults,noatime	0	1
