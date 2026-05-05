@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=RetroArch
+Exec=/usr/bin/retroarch
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
